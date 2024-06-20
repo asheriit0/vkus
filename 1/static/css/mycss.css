@@ -1,0 +1,175 @@
+@import url(https://fonts.googleapis.com/css?family=Jura);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #FFCCDA;
+    position: relative;
+}
+.text {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-right: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+/* Стилизация элементов списка */
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* Стилизация ссылок */
+nav a {
+    text-decoration: none;
+}
+
+/* Стилизация ссылок при наведении */
+nav a:hover {
+    color: #007bff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__other{
+    background: #ffffff;
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.nav__other a {
+    color: #8AA2FF;
+    font-family: Jura;
+    font-weight: 600;
+    font-size: clamp(15px, 2vw, 50px);
+}
+
+.nav__name a {
+    font-size: 50px;
+    color: #5074FF;
+    font-family: Jura;
+    font-weight: 800;
+    font-size: clamp(50px, 2.5vw, 100px);
+}
+
+
+/********************************************/
+
+
+.first_container {
+    height: 750px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.first_container img {
+    position: absolute;
+    z-index: 2;
+    width: 100%; /* Гибкость – наше всё */
+    height: auto; /* Доверьтесь автоматике */
+    object-fit: contain; /* Исключаем искажения пропорций */
+    height: 450px;
+    transform: scale(1.5);
+}
+
+
+.block {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.block div {
+    animation: running-text 12s linear infinite;
+}
+
+.block div p {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    color: #8AA2FF;
+    font-size: 475px;
+    z-index: 1;
+    top: 0;
+    font-family: Jura;
+
+}
+
+@keyframes running-text {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.second_container {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Jura;
+    margin-top: 450px;
+}
+
+.second_container p {
+    width: clamp(10ch, 50%, 50ch);
+    font-size: clamp(15px, 2.5vw, 50px);
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #5074FF;
+}
+
+.second_container .right-text {
+    width: clamp(5ch, 50%, 20ch);
+    font-size: clamp(10px, 20px, 100px);
+    margin-left: 20px;
+    margin-right: 20px;
+    color: #5074FF;
+}
+
+.second_container ul .left-text-up {
+    font-size: clamp(15px, 2vw, 50px);
+    margin-left: 40px;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+    color: #5074FF;
+}
+
+.second_container ul .left-text-down {
+    background: #ffffff;
+    color: #8AA2FF;
+    border-radius: 30px;
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(15px, 2vw, 50px);
+    font-weight: 600;
+}
+
+.second_container ul .left-text-down:hover {
+    color: #007bff;
+}
+
+
+
+/* ******************************** */
+
